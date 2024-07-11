@@ -10,7 +10,13 @@ public class UserController {
 
 	@GetMapping("/sign-up-view")
 	public String signUpView() {
-		return "layout/defaultLayout";
+		// 가운데 레이아웃 조각만 내려주면 전체 레이아웃으로 구성된다.
+		return "user/signUp";
+	}
+	
+	@GetMapping("/sign-in-view")
+	public String signInView() {
+		return "user/signIn";
 	}
 }
 
