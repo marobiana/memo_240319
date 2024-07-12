@@ -17,7 +17,25 @@ public class UserBO {
 	public UserEntity getUserEntityByLoginId(String loginId) {
 		return userRepository.findByLoginId(loginId);
 	}
+	
+	// input: 4파라미터
+	// output: UserEntity
+	public UserEntity addUser(String loginId, String password, String name, String email) {
+		return userRepository.save(UserEntity.builder()
+				.loginId(loginId)
+				.password(password)
+				.name(name)
+				.email(email)
+				.build());
+	}
 }
+
+
+
+
+
+
+
 
 
 
