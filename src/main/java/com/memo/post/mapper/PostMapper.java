@@ -19,6 +19,11 @@ public interface PostMapper {
 			@Param("direction") String direction,
 			@Param("limit") int limit);
 	
+	// 여기서의 리턴타입은 postId(int)
+	public int selectPostIdByUserIdAsSort(
+			@Param("userId") int userId,
+			@Param("sort") String sort);
+	
 	public void insertPost(
 			@Param("userId") int userId, 
 			@Param("subject") String subject, 
